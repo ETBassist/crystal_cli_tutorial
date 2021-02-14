@@ -1,4 +1,5 @@
 require "option_parser"
+require "colorize"
 
 the_beatles = [
   "John Lennon",
@@ -12,7 +13,7 @@ say_hi_to = ""
 strawberry = false
 
 OptionParser.parse do |parser|
-  parser.banner = "Welcome to The Beatles App!"
+  parser.banner = "#{"The Beatles".colorize(:yellow).on(:black)} App!"
 
   parser.on "-v", "--version", "Show version" do
     puts "version 1.0"

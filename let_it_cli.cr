@@ -1,3 +1,5 @@
+require "colorize"
+
 puts "Welcome to The Beatles Sing Along version 1.0!"
 puts "Enter a phrase you want The Beatles to sing"
 print "> "
@@ -11,5 +13,5 @@ default_lyrics = "Na, na, na, na-na-na na" \
 
 lyrics = user_input.presence || default_lyrics
 
-puts "The Beatles are singing: #{lyrics.upcase}"
+puts "The Beatles are singing: #{lyrics.upcase.colorize.mode(:blink)}"
 
